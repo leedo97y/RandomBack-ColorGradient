@@ -25,6 +25,11 @@ const body = document.body;
 function handleColor() {
   const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
   const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+
+  if (randomColor1 === randomColor2) {
+    randomColor1 = colors[0];
+    randomColor2 = colors[7];
+  }
   body.style.background = `linear-gradient(0.25turn, ${randomColor1}, ${randomColor2})`;
 }
 
