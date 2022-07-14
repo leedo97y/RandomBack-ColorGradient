@@ -18,3 +18,14 @@ const colors = [
   "#ffd32a",
   "#ff3f34",
 ];
+
+const button = document.querySelector("button");
+const body = document.body;
+
+function handleColor() {
+  const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+  const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+  body.style.background = `linear-gradient(0.25turn, ${randomColor1}, ${randomColor2})`;
+}
+
+button.addEventListener("click", handleColor);
