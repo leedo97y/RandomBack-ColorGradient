@@ -23,14 +23,24 @@ const button = document.querySelector("button");
 const body = document.body;
 
 function handleColor() {
-  let randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-  let randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+  const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+  const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
 
   do {
     randomColor2 = colors[Math.floor(Math.random() * colors.length)];
   } while (randomColor1 === randomColor2);
 
-  body.style.background = `linear-gradient(0.25turn, ${randomColor1}, ${randomColor2})`;
+  /**
+   * [ 커뮤니티를 통해 새롭게 알게 된 방식 ]
+   * filter를 통해 1에서 사용된 색상을 제외하고 2에서 선택하게 만들 수 있다.
+   *
+   * const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+   * const filterColor = colors.filter((element) => element !== randomColor1);
+   *
+   * const randomColor2 = filterColor[Math.floor(Math.random() * colors.length)];
+   */
+
+  body.style.background = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`;
 }
 
 button.addEventListener("click", handleColor);
