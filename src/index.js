@@ -23,8 +23,8 @@ const button = document.querySelector("button");
 const body = document.body;
 
 function handleColor() {
-  const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-  const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+  let randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+  let randomColor2 = colors[Math.floor(Math.random() * colors.length)];
 
   do {
     randomColor2 = colors[Math.floor(Math.random() * colors.length)];
