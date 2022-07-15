@@ -78,6 +78,36 @@ if (randomColor1 === randomColor2) {
 // [] 안의 숫자는 그냥 끌리는 숫자로 지정했다.
 ```
 
+<br>
+
+---
+
+<br>
+
+### 조건 만들기 2
+
+같은 생각으로 다르게 구현하신 분들이 있길래 보고 배웠다...! 이 방법들이 훨씬 더 안정적이고 좋은 방법인거 같다.
+
+<br>
+
+### do while 사용해서 만들기
+
+```js
+do {
+  randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+} while (randomColor1 === randomColor2);
+```
+
+### filter 사용해서 만들기
+
+```js
+const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+const filterColors = color.filter((element) => element !== randomColor1);
+
+const randomColor2 =
+  filterColors[Math.floor(Math.random() * filterColors.length)];
+```
+
 ### background linear-gradient color 지정
 
 `Click` 할때마다 `body` 부분의 배경색을 무작위 gradient로 바꿔줄 것이기 때문에 `body`에 `style`을 지정해준다.

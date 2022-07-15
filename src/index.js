@@ -35,9 +35,9 @@ function handleColor() {
    * filter를 통해 1에서 사용된 색상을 제외하고 2에서 선택하게 만들 수 있다.
    *
    * const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-   * const filterColor = colors.filter((element) => element !== randomColor1);
+   * const filterColors = colors.filter((element) => element !== randomColor1);
    *
-   * const randomColor2 = filterColor[Math.floor(Math.random() * colors.length)];
+   * const randomColor2 = filterColors[Math.floor(Math.random() * filterColors.length)];
    */
 
   body.style.background = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`;
